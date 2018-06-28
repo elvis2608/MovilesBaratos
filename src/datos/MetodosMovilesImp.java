@@ -37,6 +37,9 @@ public class MetodosMovilesImp implements IMetodosMoviles {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		System.out.println("--- en capa datos");
+		System.out.println("num marcas: "+listaMarcas.size());
+		System.out.println("lista: "+listaMarcas);
 		return listaMarcas;
 
 	}
