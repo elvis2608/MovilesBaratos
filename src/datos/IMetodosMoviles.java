@@ -13,10 +13,10 @@ public interface IMetodosMoviles {
 	
 	
 	
-	public ArrayList<String> ListarMarca ();
+	public ArrayList<String> listarMarca ();
 	
-	public ArrayList<Movil> ListarMovilMarca (int idMarca);	
-	public ArrayList<Movil> ListarMoviles ();	
+	public ArrayList<Movil> listarMovilMarca (int idMarca);	
+	public ArrayList<Movil> listarMoviles ();	
 	public Movil bucarMovil (int idMovil);	
 	
 }
