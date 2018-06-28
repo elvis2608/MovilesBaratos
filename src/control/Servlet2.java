@@ -1,5 +1,4 @@
 package control;
-
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
@@ -8,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.*;
 
 
-public class Servlet extends HttpServlet{
+public class Servlet2 extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -25,7 +24,7 @@ public class Servlet extends HttpServlet{
                 //--------------------------------------
             // Paso 3
             //   - Ceder control          
-            RequestDispatcher view = request.getRequestDispatcher("fichaTecnica.jsp");
+            RequestDispatcher view = request.getRequestDispatcher("plantillaGeneral.jsp");
             view.forward(request, response);
         } catch (Exception e) {
             System.out.println("--------------------  FALLO  -----------------------------");
@@ -75,5 +74,3 @@ public class Servlet extends HttpServlet{
     }// </editor-fold>
 
 }
-
-

@@ -1,12 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<!--
+Proyecto: Restaurante
+Versión: 3e
+Descripción: Restaurante v3e (Multi,MVC,JSP,JSTL)
+-->
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
+    <head>
+        <title>Restaurante v3e (Multi,MVC,JSP,JSTL)</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>  
+        <link href="css/restaurante.css" rel="stylesheet" type="text/css" />        
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <h1>Restaurante v3e (Multi,MVC,JSP,JSTL)</h1>
+                <h2>Paso 02 - Menú a elegir</h2>
+            </div>
+            <div id="main">
+                <form action="Servlet2" method="post">
+          			 <input type="submit" value="Realizar pedido" />
+                </form>
+            </div>
+        </div>
+    </body>
 </html>
