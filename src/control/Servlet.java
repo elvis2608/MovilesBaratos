@@ -22,19 +22,21 @@ public class Servlet extends HttpServlet{
         try {
         	IMetodosMoviles metodos = new MetodosMovilesImp();
         	ArrayList<String> listaMarcas = new ArrayList<String>();
-        	listaMarcas =metodos.listarMarca();
-        	System.out.println(listaMarcas.get(0).toString());
-        	System.out.println(listaMarcas.get(1).toString());
+        	listaMarcas = metodos.listarMarca();
+        	//System.out.println(listaMarcas.get(0).toString());
+        	//System.out.println(listaMarcas.get(1).toString());
+        	request.setAttribute("marcas", listaMarcas); 
+        
             // Paso 01
             //  - Recoger informacion
             //  - Guardarla en objeto
-            String habitacion = request.getParameter("habitacion");
-            String nombreCliente = request.getParameter("nombre");
+            //String habitacion = request.getParameter("habitacion");
+            //String nombreCliente = request.getParameter("nombre");
 
                 //--------------------------------------
             // Paso 3
             //   - Ceder control          
-            RequestDispatcher view = request.getRequestDispatcher("fichaTecnica.jsp");
+            RequestDispatcher view = request.getRequestDispatcher("plantillaGeneral.jsp");
             view.forward(request, response);
         } catch (Exception e) {
             System.out.println("--------------------  FALLO  -----------------------------");
