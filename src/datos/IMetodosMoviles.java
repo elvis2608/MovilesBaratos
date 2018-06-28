@@ -11,7 +11,7 @@ public interface IMetodosMoviles {
 	
 	
 	
-	public void ListarMarca ();
+	public ArrayList<String> ListarMarca ();
 	
 		
 	
