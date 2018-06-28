@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import modelo.entidades.Movil;
 import utilidades.ConexionBBDD;
 
 public class MetodosMovilesImp implements IMetodosMoviles {
@@ -38,6 +39,24 @@ public class MetodosMovilesImp implements IMetodosMoviles {
 		}
 		return listaMarcas;
 
+	}
+
+	@Override
+	public ArrayList<Movil> ListarMovilMarca(int idMarca) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<Movil> ListarMoviles() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Movil bucarMovil(int idMovil) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
