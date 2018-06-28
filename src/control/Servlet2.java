@@ -12,7 +12,7 @@ public class Servlet2 extends HttpServlet{
 
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("--- dentro del servlet Menu");
+        System.out.println("--- dentro del servlet Menu876547");
         try {
 
             // Paso 01

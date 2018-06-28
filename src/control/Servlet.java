@@ -1,10 +1,15 @@
 package control;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
+
+import datos.IMetodosMoviles;
+import datos.MetodosMovilesImp;
+
 import javax.servlet.http.*;
 
 
@@ -15,7 +20,11 @@ public class Servlet extends HttpServlet{
             throws ServletException, IOException {
         System.out.println("--- dentro del servlet Menu");
         try {
-
+        	IMetodosMoviles metodos = new MetodosMovilesImp();
+        	ArrayList<String> listaMarcas = new ArrayList<String>();
+        	listaMarcas =metodos.listarMarca();
+        	System.out.println(listaMarcas.get(0).toString());
+        	System.out.println(listaMarcas.get(1).toString());
             // Paso 01
             //  - Recoger informacion
             //  - Guardarla en objeto
