@@ -13,12 +13,24 @@ public class ConexionBBDD {
     static String USER = "root";
     static String PASSWORD = "1111";
 	
-    public static void Conexion () { 
-    
-    
     Connection connection = null;
-   
     
+    
+    public Connection  Conexion () { 
+      
+    try {
+        /*
+        Paso 1.- Instanciar un objeto de la clase de los Drivers de conexion
+        a la BBDD
+         */
+        Class.forName("com.mysql.jdbc.Driver");
+
+    } catch (ClassNotFoundException ex) {
+        System.out.println("No se pueden cargar los drivers de BBDD");
+        System.out.println("La aplicación ha finalizado");
+
+        System.exit(0);
+    }
     
     
     try {
@@ -27,5 +39,10 @@ public class ConexionBBDD {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}
+    return connection;
 }
+    
+    
+
+	
 }
