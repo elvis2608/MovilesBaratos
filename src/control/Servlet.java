@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 
 import datos.IMetodosMoviles;
 import datos.MetodosMovilesImp;
+import servicios.IServiciosMoviles;
+import servicios.ServiciosMovilesImp;
 
 import javax.servlet.http.*;
 
@@ -20,9 +22,9 @@ public class Servlet extends HttpServlet{
             throws ServletException, IOException {
         System.out.println("--- dentro del servlet Menu");
         try {
-        	IMetodosMoviles metodos = new MetodosMovilesImp();
+        	IServiciosMoviles servicios = new ServiciosMovilesImp();
         	ArrayList<String> listaMarcas = new ArrayList<String>();
-        	listaMarcas = metodos.listarMarca();
+        	listaMarcas = servicios.ListarMarca();
         	//System.out.println(listaMarcas.get(0).toString());
         	//System.out.println(listaMarcas.get(1).toString());
         	request.setAttribute("marcas", listaMarcas); 
