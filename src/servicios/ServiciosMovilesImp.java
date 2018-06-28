@@ -14,7 +14,7 @@ public class ServiciosMovilesImp implements IServiciosMoviles {
 		// TODO Auto-generated method stub
 		ArrayList<String> listaMarcas = new ArrayList<>();
 		
-		 listaMarcas = datos.ListarMarca();
+		 listaMarcas = datos.listarMarca();
 		
 		
 		
