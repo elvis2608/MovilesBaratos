@@ -24,10 +24,10 @@ Descripción:
 
 				<tbody>
 					<ul>
-						lista
+						
 						<c:forEach var="marcas" items="${marcas}">
 							<tr>
-								<li>valor</li>
+								
 								<li><a href="##">${marcas}</a></li>
 							</tr>
 						</c:forEach>

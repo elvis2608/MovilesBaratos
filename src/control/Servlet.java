@@ -25,16 +25,16 @@ public class Servlet extends HttpServlet{
         	IServiciosMoviles servicios = new ServiciosMovilesImp();
         	ArrayList<String> listaMarcas = new ArrayList<String>();
         	listaMarcas = servicios.ListarMarca();
-        	String[] lista = {"A","B","C"};
+        	
         	
         	
     		System.out.println("--- en service");
-    		System.out.println("num marcas: "+lista.length);
-    		System.out.println("lista: "+lista);
+    		System.out.println("num marcas: "+listaMarcas.size());
+    		System.out.println("lista: "+listaMarcas);
         	
         	//System.out.println(listaMarcas.get(0).toString());
         	//System.out.println(listaMarcas.get(1).toString());
-        	request.setAttribute("marcas", lista); 
+        	request.setAttribute("marcas", listaMarcas); 
         
             // Paso 01
             //  - Recoger informacion
