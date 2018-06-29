@@ -101,8 +101,8 @@ public class MetodosMovilesImp implements IMetodosMoviles {
 						movil.setMemoria(rs.getInt(4));
 						movil.setBateria(rs.getInt(5));
 						movil.setFoto(rs.getString(6));
-						movil.setStock(rs.getInt(7));
-						movil.setPrecio(rs.getInt(8));
+						movil.setPrecio(rs.getInt(7));
+						movil.setStock(rs.getInt(8));
 						movil.setMarca(rs.getString(9));
 						listaMoviles.add(movil);
 					}

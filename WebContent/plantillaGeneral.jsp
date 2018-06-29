@@ -49,12 +49,12 @@
 						<tbody>
 							<c:forEach var="movil" items="${moviles}">
 								<article>
-									<a href="#" class="image"><img src="images/pic01.jpg"
-										alt="" /></a>
+									<a href="#" class="image"><img src="${movil.foto}"
+										alt=""  /></a>
 										<h3>${movil.marca} ${movil.nombre}</h3>
-
+										<h3>${movil.precio} euros</h3>
 									<ul class="actions">
-										<li><a href="#" class="button">More</a></li>
+										<li><a href="#" class="button">Ver detalles</a></li>
 									</ul>
 								</article>
 							</c:forEach>
