@@ -86,7 +86,8 @@ public class MetodosMovilesImp implements IMetodosMoviles {
 		
 		try {
 			Statement st = connection.createStatement();
-			rs = st.executeQuery("SELECT * FROM movil INNER JOIN marca ON movil.idMarca = marca.idMarca");
+			rs = st.executeQuery("SELECT idMovil, movil.nombre, procesador, memoria, bateria, foto, precio, stock, marca.nombre "
+					+ "FROM movil INNER JOIN marca ON movil.idMarca = marca.idMarca");
 			
 					while (rs.next()) {
 						/*
@@ -101,6 +102,8 @@ public class MetodosMovilesImp implements IMetodosMoviles {
 						movil.setBateria(rs.getInt(5));
 						movil.setFoto(rs.getString(6));
 						movil.setStock(rs.getInt(7));
+						movil.setPrecio(rs.getInt(8));
+						movil.setMarca(rs.getString(9));
 						listaMoviles.add(movil);
 					}
 			

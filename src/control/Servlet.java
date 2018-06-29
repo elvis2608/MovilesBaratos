@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 
 import datos.IMetodosMoviles;
 import datos.MetodosMovilesImp;
+import modelo.entidades.Movil;
 import servicios.IServiciosMoviles;
 import servicios.ServiciosMovilesImp;
 
@@ -26,7 +27,8 @@ public class Servlet extends HttpServlet{
         	ArrayList<String> listaMarcas = new ArrayList<String>();
         	listaMarcas = servicios.ListarMarca();
         	
-        	
+        	ArrayList<Movil> listaMoviles = new ArrayList<Movil>();
+        	listaMoviles =servicios.listarMoviles();
         	
     		System.out.println("--- en service");
     		System.out.println("num marcas: "+listaMarcas.size());
@@ -35,6 +37,7 @@ public class Servlet extends HttpServlet{
         	//System.out.println(listaMarcas.get(0).toString());
         	//System.out.println(listaMarcas.get(1).toString());
         	request.setAttribute("marcas", listaMarcas); 
+        	request.setAttribute("moviles", listaMoviles); 
         
             // Paso 01
             //  - Recoger informacion
