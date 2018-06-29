@@ -47,7 +47,7 @@ public class MetodosMovilesImp implements IMetodosMoviles {
 	@Override
 	public ArrayList<Movil> listarMovilMarca(int idMarca) {
 		ConexionBBDD c = new ConexionBBDD();
-		ArrayList<Movil> listaMoviles = new ArrayList<Movil>();
+		ArrayList<Movil> listaMovilesMarca = new ArrayList<Movil>();
 		connection = c.Conexion();
 
 		try {
@@ -65,7 +65,7 @@ public class MetodosMovilesImp implements IMetodosMoviles {
 				movil.setPrecio( rs.getInt(7));
 				movil.setStock(rs.getInt(8));
 				
-				listaMoviles.add(movil);
+				listaMovilesMarca.add(movil);
 				//System.out.println(nombre);
 			}
 
@@ -73,7 +73,7 @@ public class MetodosMovilesImp implements IMetodosMoviles {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return listaMoviles;
+		return listaMovilesMarca;
 	}
 
 	@Override
