@@ -51,7 +51,7 @@
 								<article>
 									<a href="#" class="image"><img src="${movil.foto}"
 										alt=""  /></a>
-										<h3>${movil.marca} ${movil.nombre}</h3>
+										<h3>${movil.marca.nombre} ${movil.nombre}</h3>
 										<h3>${movil.precio} euros</h3>
 									<ul class="actions">
 										<li><a href="#" class="button">Ver detalles</a></li>
