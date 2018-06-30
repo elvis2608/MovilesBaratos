@@ -51,7 +51,6 @@
 								<article>
 									<a href="#" class="image"><img src="${movil.foto}"
 										alt=""  /></a>
-										Hola gamero
 										<h3>${movil.marca.nombre} ${movil.nombre}</h3>
 										<h3>${movil.precio} euros</h3>
 									<ul class="actions">
