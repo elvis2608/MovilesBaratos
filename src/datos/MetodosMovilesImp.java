@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+import modelo.entidades.Marca;
 import modelo.entidades.Movil;
 import utilidades.ConexionBBDD;
 
@@ -86,7 +87,7 @@ public class MetodosMovilesImp implements IMetodosMoviles {
 		
 		try {
 			Statement st = connection.createStatement();
-			rs = st.executeQuery("SELECT idMovil, movil.nombre, procesador, memoria, bateria, foto, precio, stock, marca.nombre "
+			rs = st.executeQuery("SELECT idMovil, movil.nombre, procesador, memoria, bateria, foto, precio, stock, marca.idMarca, marca.nombre "
 					+ "FROM movil INNER JOIN marca ON movil.idMarca = marca.idMarca");
 			
 					while (rs.next()) {
@@ -103,7 +104,8 @@ public class MetodosMovilesImp implements IMetodosMoviles {
 						movil.setFoto(rs.getString(6));
 						movil.setPrecio(rs.getInt(7));
 						movil.setStock(rs.getInt(8));
-						movil.setMarca(rs.getString(9));
+						Marca marca =new Marca (rs.getInt(9), rs.getString(10));
+						movil.setMarca(marca);
 						listaMoviles.add(movil);
 					}
 			
