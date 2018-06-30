@@ -83,8 +83,8 @@
 					</header>
 					<ul>
 						<tbody>
-							<c:forEach var="marcas" items="${marcas}">
-								<li><a href="index.html">${marcas}</a></li>
+							<c:forEach var="marca" items="${marcas}">
+								<li><a href="index.html">${marca.nombre}</a></li>
 							</c:forEach>
 						</tbody>
 					</ul>

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import datos.IMetodosMoviles;
 import datos.MetodosMovilesImp;
+import modelo.entidades.Marca;
 import modelo.entidades.Movil;
 
 public class ServiciosMovilesImp implements IServiciosMoviles {
@@ -11,9 +12,9 @@ public class ServiciosMovilesImp implements IServiciosMoviles {
 	private IMetodosMoviles datos = new MetodosMovilesImp();
 	
 	@Override
-	public ArrayList<String> ListarMarca() {
+	public ArrayList<Marca> ListarMarca() {
 		// TODO Auto-generated method stub
-		ArrayList<String> listaMarcas = new ArrayList<>();
+		ArrayList<Marca> listaMarcas = new ArrayList<>();
 		
 		 listaMarcas = datos.listarMarca();
 		

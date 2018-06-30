@@ -17,10 +17,10 @@ public class MetodosMovilesImp implements IMetodosMoviles {
 	Connection connection = null;
 
 	@Override
-	public ArrayList<String> listarMarca() {
+	public ArrayList<Marca> listarMarca() {
 		// TODO Auto-generated method stub
 		ConexionBBDD c = new ConexionBBDD();
-		ArrayList<String> listaMarcas = new ArrayList<>();
+		ArrayList<Marca> listaMarcas = new ArrayList<>();
 		connection = c.Conexion();
 
 		try {
@@ -28,10 +28,9 @@ public class MetodosMovilesImp implements IMetodosMoviles {
 			rs = st.executeQuery("SELECT * FROM marca");
 
 			while (rs.next()) {
+				Marca marca = new Marca(rs.getInt(1), rs.getString(2));
+				listaMarcas.add(marca);
 
-				String nombre = rs.getString(2);
-				listaMarcas.add(nombre);
-				//System.out.println(nombre);
 			}
 
 		} catch (SQLException e) {
