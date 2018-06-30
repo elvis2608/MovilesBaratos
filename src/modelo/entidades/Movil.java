@@ -23,7 +23,7 @@ public class Movil {
 	/**
 	 * Módelo del móvil
 	 */
-	private String marca;
+	private Marca marca;
 	/**
 	 * Nombre del procesador
 	 */
@@ -81,7 +81,7 @@ public class Movil {
 	 * @param stock
 	 *            Móviles disponibles
 	 */
-	public Movil(int idMovil, String nombre, String marca, String procesador, int memoria, int bateria, String foto,
+	public Movil(int idMovil, String nombre, Marca marca, String procesador, int memoria, int bateria, String foto,
 			int precio, int stock) {
 		super();
 		this.idMovil = idMovil;
@@ -126,11 +126,11 @@ public class Movil {
 		this.nombre = nombre;
 	}
 
-	public String getMarca() {
+	public Marca getMarca() {
 		return marca;
 	}
 
-	public void setMarca(String marca) {
+	public void setMarca(Marca marca) {
 		this.marca = marca;
 	}
 
