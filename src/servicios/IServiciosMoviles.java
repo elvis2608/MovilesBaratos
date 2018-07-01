@@ -2,11 +2,12 @@ package servicios;
 
 import java.util.ArrayList;
 
+import modelo.entidades.Marca;
 import modelo.entidades.Movil;
 
 public interface IServiciosMoviles {
 
-	public ArrayList<String> ListarMarca ();
+	public ArrayList<Marca> ListarMarca ();
 	
 	public ArrayList<Movil> listarMovilMarca (int idMarca);	
 	

@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 
 import datos.IMetodosMoviles;
 import datos.MetodosMovilesImp;
+import modelo.entidades.Marca;
 import modelo.entidades.Movil;
 import servicios.IServiciosMoviles;
 import servicios.ServiciosMovilesImp;
@@ -23,31 +24,28 @@ public class Servlet extends HttpServlet{
             throws ServletException, IOException {
         System.out.println("--- dentro del servlet Menu");
         try {
+               	       	 
         	IServiciosMoviles servicios = new ServiciosMovilesImp();
-        	ArrayList<String> listaMarcas = new ArrayList<String>();
+        	ArrayList<Marca> listaMarcas = new ArrayList<Marca>();
         	listaMarcas = servicios.ListarMarca();
         	
+        	
+        	
         	ArrayList<Movil> listaMoviles = new ArrayList<Movil>();
-        	listaMoviles =servicios.listarMoviles();
+        	String c = request.getParameter("id");
         	
-    		System.out.println("--- en service");
-    		System.out.println("num marcas: "+listaMarcas.size());
-    		System.out.println("lista: "+listaMarcas);
+        	if(c == null){
+            	listaMoviles=servicios.listarMoviles();
+        	}else{
+        		int numEntero = Integer.parseInt(c);
+        		listaMoviles =servicios.listarMovilMarca(numEntero);
+        		//listaMarcas= servicios.listarMarcas();
+        	}
         	
-        	//System.out.println(listaMarcas.get(0).toString());
-        	//System.out.println(listaMarcas.get(1).toString());
+
         	request.setAttribute("marcas", listaMarcas); 
         	request.setAttribute("moviles", listaMoviles); 
-        
-            // Paso 01
-            //  - Recoger informacion
-            //  - Guardarla en objeto
-            //String habitacion = request.getParameter("habitacion");
-            //String nombreCliente = request.getParameter("nombre");
-
-                //--------------------------------------
-            // Paso 3
-            //   - Ceder control          
+                 
             RequestDispatcher view = request.getRequestDispatcher("plantillaGeneral.jsp");
             view.forward(request, response);
         } catch (Exception e) {

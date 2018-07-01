@@ -1,10 +1,15 @@
 package control;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.*;
+
+import modelo.entidades.Marca;
+import modelo.entidades.Movil;
+import servicios.IServiciosMoviles;
+import servicios.ServiciosMovilesImp;
 
 
 public class Servlet2 extends HttpServlet{
@@ -12,19 +17,40 @@ public class Servlet2 extends HttpServlet{
 
 	protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("--- dentro del servlet Menu876547");
+        System.out.println("--- dentro del servlet Menu");
         try {
+               	       	 
+        	IServiciosMoviles servicios = new ServiciosMovilesImp();
+        	ArrayList<Marca> listaMarcas = new ArrayList<Marca>();
+        	listaMarcas = servicios.ListarMarca();
+        	
+        	
+        	
+        	ArrayList<Movil> listaMoviles = new ArrayList<Movil>();
+        	String c = request.getParameter("idMovil");
+        	
+        	request.setAttribute("marcas", listaMarcas); 
+            	
+        	if(c == null){
+        		request.setAttribute("moviles", listaMoviles); 
+            	listaMoviles=servicios.listarMoviles();
+            	RequestDispatcher view = request.getRequestDispatcher("plantillaGeneral.jsp");
+        	}else{
+            	Movil movil =new Movil();
+            	int numEntero = Integer.parseInt(c);
+            	ArrayList<Movil> listaMoviles2 = new ArrayList<Movil>();
+            	movil = servicios.bucarMovil(numEntero);
+            	System.out.print(movil);
+            	listaMoviles2.add(movil);
+            	request.setAttribute("movilGamero", listaMoviles2); 
+        		//RequestDispatcher view = request.getRequestDispatcher("fichaTecnica.jsp");
+        		//listaMarcas= servicios.listarMarcas();
+        	}
+        	
 
-            // Paso 01
-            //  - Recoger informacion
-            //  - Guardarla en objeto
-            String habitacion = request.getParameter("habitacion");
-            String nombreCliente = request.getParameter("nombre");
-
-                //--------------------------------------
-            // Paso 3
-            //   - Ceder control          
-            RequestDispatcher view = request.getRequestDispatcher("plantillaGeneral.jsp");
+        	
+                 
+            RequestDispatcher view = request.getRequestDispatcher("fichaTecnica.jsp");
             view.forward(request, response);
         } catch (Exception e) {
             System.out.println("--------------------  FALLO  -----------------------------");
