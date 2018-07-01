@@ -87,8 +87,12 @@
 						<tbody>
 							<c:forEach var="marca" items="${marcas}">
 
+
 								<li><a href='Servlet?id=${marca.idMarca}'>
 										${marca.nombre}</a></li>
+
+								<li><a href="index.html">${marca.nombre}</a></li>
+
 							</c:forEach>
 						</tbody>
 					</ul>

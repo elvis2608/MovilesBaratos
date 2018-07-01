@@ -34,6 +34,7 @@ public class Servlet extends HttpServlet{
         	ArrayList<Movil> listaMoviles = new ArrayList<Movil>();
         	String c = request.getParameter("id");
         	
+
         	if(c == null){
             	listaMoviles=servicios.listarMoviles();
         	}else{
@@ -42,6 +43,7 @@ public class Servlet extends HttpServlet{
         		//listaMarcas= servicios.listarMarcas();
         	}
         	
+
 
         	request.setAttribute("marcas", listaMarcas); 
         	request.setAttribute("moviles", listaMoviles); 
