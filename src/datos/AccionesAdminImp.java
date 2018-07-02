@@ -43,6 +43,21 @@ public class AccionesAdminImp implements IAccionesAdmin {
 	public void deleteMovil(int idMovil) {
 		// TODO Auto-generated method stub
 		
+		ConexionBBDD c = new ConexionBBDD();
+		connection = c.Conexion();
+		
+		try {
+			Statement st = connection.createStatement();
+			String borrar = "DELETE FROM `movil` WHERE IdMovil ='" + idMovil + "'";
+			int i = st.executeUpdate(borrar);
+            System.out.println("Ha salido la query");
+
+        } catch (SQLException e) {
+
+            System.out.println(e.getMessage());
+
+        } 
+		
 		
 	}
 
@@ -50,6 +65,21 @@ public class AccionesAdminImp implements IAccionesAdmin {
 	public void updateMovil(Movil movil) {
 		// TODO Auto-generated method stub
 		
+					ConexionBBDD c = new ConexionBBDD();
+					connection = c.Conexion();
+					
+					try {
+						Statement st = connection.createStatement();
+						String query = "UPDATE `movil` SET nombre = " + movil.getNombre() + "', procesador ='" + movil.getProcesador() + "', memoria = '" + movil.getMemoria() + "', bateria = '" + movil.getBateria() + "','precio = " + movil.getPrecio() + "','stock = " + movil.getStock() + "','idMarca = "  + movil.getMarca().getIdMarca()+";";
+						int i = st.executeUpdate(query);
+			            System.out.println("Ha salido la query");
+
+			        } catch (SQLException e) {
+
+			            System.out.println(e.getMessage());
+
+			        } 
+					
 	}
 
 }
