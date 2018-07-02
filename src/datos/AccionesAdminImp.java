@@ -19,6 +19,7 @@ public class AccionesAdminImp implements IAccionesAdmin {
 	@Override
 	public void addMovil(Movil movil) {
 		// TODO Auto-generated method stub
+		// Añadir movil
 			ConexionBBDD c = new ConexionBBDD();
 			connection = c.Conexion();
 			
