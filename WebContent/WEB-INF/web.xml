@@ -15,7 +15,15 @@
     <servlet-mapping>
         <servlet-name>Servlet2</servlet-name>
         <url-pattern>/Servlet2</url-pattern>
-    </servlet-mapping>   
+    </servlet-mapping>  
+    <servlet>
+        <servlet-name>ServletAdmin</servlet-name>
+        <servlet-class>control.ServletAdmin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletAdmin</servlet-name>
+        <url-pattern>/ServletAdmin</url-pattern>
+    </servlet-mapping> 
     <session-config>
         <session-timeout>
             10

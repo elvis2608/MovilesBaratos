@@ -24,6 +24,8 @@
 			<div class="inner">
 				<a href="Servlet" class="logo"><strong></strong><img
 					src="images/logoPrincipal.PNG" alt=""></img></a>
+					<a href="ServletAdmin" class="logo"><strong></strong><img
+					src="images/logoPrincipal.PNG" alt=""></img></a>
 				<!-- Header -->
 				<header id="header">
 
