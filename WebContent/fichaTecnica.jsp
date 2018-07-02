@@ -48,7 +48,7 @@
 							<header class="major">
 								<h2>${movil.marca.nombre} ${movil.nombre}:</h2>
 							</header>
-							<span class="image main"><img src="${movil.foto}"/></span>
+							<span class="image main"><img src="${movil.foto}" /></span>
 							<h2>CARACTERISTICAS:</h2>
 							<h3>Precio: ${movil.precio}euros</h3>
 							<h3>Procesador: ${movil.procesador}</h3>

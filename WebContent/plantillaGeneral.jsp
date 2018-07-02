@@ -54,7 +54,8 @@
 									<h3>${movil.marca.nombre} ${movil.nombre}</h3>
 									<h3>${movil.precio}euros</h3>
 									<ul class="actions">
-										<li><a href="Servlet2?idMovil=${movil.idMovil}" class="button">Ver detalles</a></li>
+										<li><a href="Servlet2?idMovil=${movil.idMovil}"
+											class="button">Ver detalles</a></li>
 									</ul>
 								</article>
 							</c:forEach>
@@ -91,7 +92,7 @@
 								<li><a href='Servlet?id=${marca.idMarca}'>
 										${marca.nombre}</a></li>
 
-								<li><a href="index.html">${marca.nombre}</a></li>
+
 
 							</c:forEach>
 						</tbody>
@@ -108,8 +109,8 @@
 					<ul class="contact">
 						<li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
 						<li class="fa-phone">654 654 786</li>
-						<li class="fa-home">Av San Juan nº136 bajo C <br />
-							Madrid, CC:24765
+						<li class="fa-home">Av San Juan nº136 bajo C <br /> Madrid,
+							CC:24765
 						</li>
 					</ul>
 				</section>
@@ -117,9 +118,8 @@
 				<!-- Footer -->
 				<footer id="footer">
 					<p class="copyright">
-						&copy; Pagina creada por Ruben, Elvis y Gamero: <a
-							href="Servlet"></a>. Design: <a
-							href="Servlet">movilesBaratos.com</a>.
+						&copy; Pagina creada por Ruben, Elvis y Gamero: <a href="Servlet"></a>.
+						Design: <a href="Servlet">movilesBaratos.com</a>.
 					</p>
 				</footer>
 
