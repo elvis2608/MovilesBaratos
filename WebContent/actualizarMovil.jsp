@@ -51,7 +51,7 @@
 							<span class="image main"><img src="${movil.foto}" /></span>
 							<h2>CARACTERISTICAS:</h2>
 							<h3>MARCA:</h3>
-							<form action="Servlet" method="post">
+							<form action="ServletCrearMovil" method="post">
 							<h3>
 							<select>
 								<option selected> ${movil.marca.nombre} </option>
@@ -59,6 +59,10 @@
 								<option> ${marca.nombre}</option>
 							</c:forEach>
 							</select>
+							</h3>
+							<h3>
+								<label>Nombre:</label>
+                            	<input type="text" name="Nombre" id="Nombre" value ="${movil.nombre}" placeholder="${movil.nombre}"/>
 							</h3>
 							<h3>
 								<label>Precio(Euros):</label>
@@ -79,11 +83,12 @@
 							<h3>
 								<label>Bateria(mAh):</label>
                             	<input type="text" name="Bateria" id = "Bateria" value ="${movil.bateria}" placeholder="${movil.bateria}"/>
-							</h3>						
+							</h3>
+								<input type ="hidden" name="Idmovil" id = "Idmovil" value="${movil.idMovil}" />					
 						</c:forEach>
 							<div>
        							 <button type="submit">Aceptar</button>
-       							 <button href="ServletAdmin">Cancelar</button>
+       							 <button href="#">Cancelar</button>
    							</div>
    							</form>
 										

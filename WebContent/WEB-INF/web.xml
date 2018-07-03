@@ -24,6 +24,14 @@
         <servlet-name>ServletAdmin</servlet-name>
         <url-pattern>/ServletAdmin</url-pattern>
     </servlet-mapping> 
+    <servlet>
+        <servlet-name>ServletCrearMovil</servlet-name>
+        <servlet-class>control.ServletCrearMovil</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ServletCrearMovil</servlet-name>
+        <url-pattern>/ServletCrearMovil</url-pattern>
+    </servlet-mapping> 
     <session-config>
         <session-timeout>
             10

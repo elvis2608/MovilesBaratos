@@ -70,7 +70,11 @@ public class AccionesAdminImp implements IAccionesAdmin {
 					
 					try {
 						Statement st = connection.createStatement();
-						String query = "UPDATE `movil` SET nombre = " + movil.getNombre() + "', procesador ='" + movil.getProcesador() + "', memoria = '" + movil.getMemoria() + "', bateria = '" + movil.getBateria() + "','precio = " + movil.getPrecio() + "','stock = " + movil.getStock() + "','idMarca = "  + movil.getMarca().getIdMarca()+";";
+						String query = "UPDATE `movil` SET nombre = '" + movil.getNombre() + "', procesador ='" 
+						+ movil.getProcesador() + "', memoria = '" + movil.getMemoria() + "', bateria = '" 
+						+ movil.getBateria() + "',precio = '" + movil.getPrecio() + "', stock = '" + movil.getStock()
+						+"' WHERE idMovil="+ movil.getIdMovil()+";";
+						System.out.println(query);
 						int i = st.executeUpdate(query);
 			            System.out.println("Ha salido la query");
 

@@ -36,10 +36,11 @@
                                 <td><a href="#" class="image"><img src="${movil.foto}" alt="" /></a></td>
                                 <td style="vertical-align: middle;">${movil.nombre}</td>
                                 <td style="vertical-align: middle;">${movil.marca.nombre}</td>
-                                <td style="vertical-align: middle;"><a href="ServletAdmin?operacion=detalles&id=${movil.idMovil}">Ver Detalles</a></td>
+                                <td style="vertical-align: middle;"><a href="ServletAdmin?operacion=detalles&id=${movil.idMovil}">Editar</a></td>
                                 <td style="vertical-align: middle;"><a href="ServletAdmin?operacion=baja?id=${movil.idMovil}">Eliminar</a></td>
                             </tr>
                         </c:forEach>
+                        
                     </tbody>
                 </table>
                 <p><a href="ServletAdmin?operacion=alta">Crear nuevo movil</a></p>
@@ -49,6 +50,8 @@
                 <div id="listado"></div>
             </div>
         </div>
+       	<a href="Servlet" class="logo"><strong></strong><img
+					src="images/salida.png" alt=""></img></a>
 
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
